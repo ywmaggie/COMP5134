@@ -8,8 +8,8 @@ package mode;
 
 public class Staff {
 	
-	private String staffName;
-	private String directSupervisor;
+	private int staffID;
+	private int supervisorID;
 	
 	/**
 	 * Constructor
@@ -20,12 +20,12 @@ public class Staff {
 			
 	}
 	
-	public String getStaffname() {
-		return staffName;
+	public int getStaffID() {
+		return staffID;
 	}
 	
-	public String getDirectSupervisor() {
-		return directSupervisor;
+	public int getSupervisorID() {
+		return supervisorID;
 	}
 	
 	
@@ -37,7 +37,9 @@ public class Staff {
 	 * a staff ask for leave
 	 */
 	public void askForLeave(){
-		LeaveApplication leaveApplication = new LeaveApplication();
+		int x =;
+		int y =;
+		LeaveApplication leaveApplication = new LeaveApplication(x, y);
 		
 		
 	}
@@ -47,7 +49,7 @@ public class Staff {
 	 * @param directSupervisor 
 	 * @param replyStatus
 	 */
-	public void receiveApproval(String directSupervisor, boolean replyStatus){
+	public void receiveApproval(int staffID, boolean replyStatus){
 		
 	}
 	
@@ -55,7 +57,7 @@ public class Staff {
 	 * receive 
 	 * @param staffName  
 	 */
-	public void receiveLeaveRequest(String staffName){
+	public void receiveLeaveRequest(int staffID, LeaveApplication leaveApplication){
 		
 	}
 	
