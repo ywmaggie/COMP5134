@@ -1,5 +1,7 @@
 package mode;
 
+import javax.swing.JOptionPane;
+
 //import java.util.HashSet;
 
 
@@ -82,6 +84,7 @@ public class Staff {
 			String startDate, String endDate){
 		LeaveApplication leaveApplication = new LeaveApplication(staffID, //staffName, 
 				startDate, endDate);
+		supervisor.receiveLeaveRequest(staffID, leaveApplication);
 		
 	}
 	
@@ -111,6 +114,13 @@ public class Staff {
 	 * @param replyStatus 回复：true--->批准, false--->不批准
 	 */
 	public void receiveApproval(String staffID, boolean replyStatus){
+		if(replyStatus) {
+			//此处希望呼叫到staff的LeaveApplicationWindow,而且这个dialog总感觉应该写在LeaveApplicationWindow里面
+			JOptionPane.showMessageDialog(LeaveApplicationWindow(staffID),"Your application has been approved.");
+		} else {
+			JOptionPane.showMessageDialog(LeaveApplicationWindow(staffID),"Your application has been rejected by "
+		+ supervisor.getStaffID() + " .");
+		} 
 		
 	}
 	
