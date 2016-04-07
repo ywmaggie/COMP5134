@@ -11,8 +11,8 @@ package mode;
 
 public class Staff {
 	
-	private int staffID;
-	private String staffName;
+	private String staffID;
+	//private String staffName;
 	//private int directSupervisor;
 		
 	//private HashSet<Integer> waitingReplyOfSupervisors;
@@ -31,7 +31,8 @@ public class Staff {
 	// 	waitingDescendents = new HashSet<>();
 	//	waitingReplyOfSupervisors = new HashSet<>();
 	// }
-	public Staff(int staffID, String staffName, Staff supervisor){
+	public Staff(String staffID, //String staffName,
+			Staff supervisor){
 		
 			
 	}
@@ -40,21 +41,21 @@ public class Staff {
 	// getters and setters
 	//
 	
-	public int getStaffID() {
+	public String getStaffID() {
 		return staffID;
 	}
 	
-	public void setStaffID(int staffID) {
+	public void setStaffID(String staffID) {
 		this.staffID = staffID;
 	}
 	
-	public String getStaffName() {
-		return staffName;
-	}
+	//public String getStaffName() {
+	//	return staffName;
+	//}
 	
-	public void setStaffName(String staffName) {
-		this.staffName = staffName;
-	}
+	//public void setStaffName(String staffName) {
+	//	this.staffName = staffName;
+	//}
 	
 	public Staff getSupervisor() {
 		return supervisor;
@@ -76,12 +77,10 @@ public class Staff {
 	// public void askForLeave(){
 		
 	// }
-	public void askForLeave(int staffID, String staffName){
-		LeaveApplication leaveApplication = new LeaveApplication(staffID, staffName, startDate, endDate);
-		staffID = this.staffID;
-		staffName = this.staffName;
-	 
-		
+	public void askForLeave(String staffID, //String staffName, 
+			String startDate, String endDate){
+		LeaveApplication leaveApplication = new LeaveApplication(staffID, //staffName, 
+				startDate, endDate);
 		
 	}
 	
@@ -91,7 +90,7 @@ public class Staff {
 	 * receive 
 	 * @param staffName  
 	 */
-	public void receiveLeaveRequest(int staffID, LeaveApplication leaveApplication){
+	public void receiveLeaveRequest(String staffID, LeaveApplication leaveApplication){
 		
 	}
 	
@@ -100,7 +99,7 @@ public class Staff {
 	 * @param staffId    下级员工的id
 	 * @param replyStatus   批准/不批准
 	 */
-	public void approve(int staffId, boolean replyStatus){
+	public void approve(String staffId, boolean replyStatus){
 		
 	}
 	
@@ -109,7 +108,7 @@ public class Staff {
 	 * @param directSupervisor 
 	 * @param replyStatus
 	 */
-	public void receiveApproval(int staffID, boolean replyStatus){
+	public void receiveApproval(String staffID, boolean replyStatus){
 		
 	}
 	

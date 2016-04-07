@@ -21,9 +21,12 @@ public class AddnDeleteStaffWindow extends JFrame{
         JPanel topPanel = new JPanel();
         topPanel.add(new JLabel("Welcome to HR System"));
         JPanel centerPanel = new JPanel(new GridLayout(7, 3, 5, 10));
+        
+        //占位置用的
         for (int i = 0; i < 6; i++) {
             centerPanel.add(new JPanel());
         }
+        //
         
         centerPanel.add(new JLabel("StaffID", SwingConstants.RIGHT));
         final JTextField staffIDTextField = new JTextField("", 20);
@@ -33,12 +36,20 @@ public class AddnDeleteStaffWindow extends JFrame{
         centerPanel.add(new JLabel("SupervisorID", SwingConstants.RIGHT));
         final JTextField supervisorIDTextField = new JTextField("", 20);
         centerPanel.add(supervisorIDTextField);
+        
+        //占位置用的
         centerPanel.add(new JPanel());
         centerPanel.add(new JPanel());
+        //
+        
         JButton addStaffButton = new JButton("Add");
         centerPanel.add(addStaffButton);
+        
+        //占位置用的
         centerPanel.add(new JPanel());
         centerPanel.add(new JPanel());
+        //
+        
         JButton deleteStaffButton = new JButton("Delete");
         centerPanel.add(deleteStaffButton);
         centerPanel.add(new JPanel());
@@ -53,12 +64,9 @@ public class AddnDeleteStaffWindow extends JFrame{
         loginButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if (stafflist.contains(staffIDTextField.getText())) {
-                    JOptionPane.showMessageDialog(MyWindow.this, "Hello " + usernameTextField.getText());
-                } else {
-                    JOptionPane.showMessageDialog(MyWindow.this, "Wrong username or password!");
+                new LeaveApplicationWindow(staffIDTextField.getText()); //此处如何创建一个可以被关联到某个staff身上的window，并能够被后面的
                 }
-            }
+            
         });
         centerPanel.add(loginButton);
         

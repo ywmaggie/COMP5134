@@ -14,7 +14,8 @@ public class LeaveApplication {
 	 * @param startDate
 	 * @param endDate
 	 */
-	public LeaveApplication (int staffID, String staffName, int startDate, int endDate) {
+	public LeaveApplication (String staffID, //String staffName, 
+			String startDate, String endDate) {
 		
 		
 	}

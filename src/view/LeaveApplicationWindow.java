@@ -6,7 +6,7 @@ import java.awt.*;
 public class LeaveApplicationWindow extends JFrame{
 	
 	
-	public LeaveApplicationWindow(int staffID) {
+	public LeaveApplicationWindow(String staffID) {
         super("Staff Window");
         this.setSize(500, 300);
         this.setLocation(100, 100);
