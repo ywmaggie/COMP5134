@@ -70,9 +70,10 @@ public class Staff {
 	//
 	
 	/**
-	 * a staff ask for leave
-	 * @param staffID 
-	 * @param staffName 
+	 * 作为下级时使用，申请外出
+	 * @param staffID 申请外出的下级的ID
+	 * @param startDate 申请外出的开始日期
+	 * @param endDate 申请外出的结束日期 
 	 */
 	// public void askForLeave(){
 		
@@ -87,8 +88,9 @@ public class Staff {
 
 	
 	/**
-	 * receive 
-	 * @param staffName  
+	 * 作为上级时使用，收到staffID下级的leaveApplication 
+	 * @param staffID 申请外出的下级
+	 * @param leaveApplication staffID下级的外出申请
 	 */
 	public void receiveLeaveRequest(String staffID, LeaveApplication leaveApplication){
 		
@@ -104,9 +106,9 @@ public class Staff {
 	}
 	
 	/**
-	 * receive 
-	 * @param directSupervisor 
-	 * @param replyStatus
+	 * 作为下级时使用 
+	 * @param staffID 批准／不批准 的上级的staffID 
+	 * @param replyStatus 回复：true--->批准, false--->不批准
 	 */
 	public void receiveApproval(String staffID, boolean replyStatus){
 		
