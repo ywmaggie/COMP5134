@@ -2,10 +2,12 @@ package view;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 /**
- * This is the UserInterface for staff
- * @author Jianuo
+ * This is the UserInterface for HRStaff to add/delete staff, and for staff to login
+ * @author Jianuo YANG
  */
 public class FrontWindow extends JFrame{
 
@@ -14,28 +16,49 @@ public class FrontWindow extends JFrame{
         this.setSize(500, 300);
         this.setLocation(100, 100);
         
+        
         JPanel aPanel = new JPanel(new BorderLayout());
         JPanel topPanel = new JPanel();
         topPanel.add(new JLabel("Welcome to HR System"));
-        JPanel centerPanel = new JPanel(new GridLayout(8, 3, 5, 10));
+        JPanel centerPanel = new JPanel(new GridLayout(7, 3, 5, 10));
         for (int i = 0; i < 6; i++) {
             centerPanel.add(new JPanel());
         }
+        
         centerPanel.add(new JLabel("StaffID", SwingConstants.RIGHT));
         final JTextField staffIDTextField = new JTextField("", 20);
         centerPanel.add(staffIDTextField);
         JButton loginButton = new JButton("Login");
+        
+        /**
+         * loginButton function
+         */
+        loginButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if (staffIDTextField.getText().length() >= 3 ) {
+                    JOptionPane.showMessageDialog(MyWindow.this, "Hello " + usernameTextField.getText());
+                } else {
+                    JOptionPane.showMessageDialog(MyWindow.this, "Wrong username or password!");
+                }
+            }
+        });
+        
+        
         centerPanel.add(loginButton);
         centerPanel.add(new JLabel("SupervisorID", SwingConstants.RIGHT));
         final JTextField supervisorIDTextField = new JTextField("", 20);
         centerPanel.add(supervisorIDTextField);
         centerPanel.add(new JPanel());
+        centerPanel.add(new JPanel());
         JButton addStaffButton = new JButton("Add");
         centerPanel.add(addStaffButton);
         centerPanel.add(new JPanel());
+        centerPanel.add(new JPanel());
         JButton deleteStaffButton = new JButton("Delete");
         centerPanel.add(deleteStaffButton);
-        for (int i = 0; i < 9; i++) {
+        centerPanel.add(new JPanel());
+        for (int i = 0; i < 3; i++) {
             centerPanel.add(new JPanel());
         }
         aPanel.add(centerPanel, BorderLayout.CENTER);

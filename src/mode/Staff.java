@@ -1,7 +1,12 @@
 package mode;
 
+import java.util.HashSet;
+
+//import java.util.HashSet;
+
+
 /**
- * This is the class for staff
+ * Staff contains all the information and abilities of a staff.
  * @author Jianuo
  *
  */
@@ -9,25 +14,57 @@ package mode;
 public class Staff {
 	
 	private int staffID;
-	private int supervisorID;
+	private String staffName;
+	//private int directSupervisor;
+		
+	//private HashSet<Integer> waitingReplyOfSupervisors;
+	//private HashSet<Integer> waitingDescendents;
+	
+	private Staff supervisor;
 	
 	/**
-	 * Constructor
-	 * @param staffname is the staff's name
-	 * @param directSupervisor is the name of that staff's supervisor
+	 * Constructor for a new staff.
+	 * @param staffID is the ID number of the staff.
+	 * @param staffName is the name of the staff.
+	 * @param supervisor is the supervisor of the staff.
 	 */
-	public Staff(String staffName, String directSupervisor){
+	
+	// public Staff(int staffId, int staffName, int directSupervisor){
+	// 	waitingDescendents = new HashSet<>();
+	//	waitingReplyOfSupervisors = new HashSet<>();
+	// }
+	public Staff(int staffID, String staffName, Staff supervisor){
+		
 			
 	}
+	
+	//
+	// getters and setters
+	//
 	
 	public int getStaffID() {
 		return staffID;
 	}
 	
-	public int getSupervisorID() {
-		return supervisorID;
+	public void setStaffID(int staffID) {
+		this.staffID = staffID;
 	}
 	
+	public String getStaffName() {
+		return staffName;
+	}
+	
+	public void setStaffName(String staffName) {
+		this.staffName = staffName;
+	}
+	
+	public Staff getSupervisor() {
+		return supervisor;
+	}
+
+	public void setSupervisor(Staff supervisor) {
+		this.supervisor = supervisor;
+	}
 	
 	// 
 	//all the functions
@@ -35,11 +72,17 @@ public class Staff {
 	
 	/**
 	 * a staff ask for leave
+	 * @param staffID 
+	 * @param staffName 
 	 */
-	public void askForLeave(){
-		int x =;
-		int y =;
-		LeaveApplication leaveApplication = new LeaveApplication(x, y);
+	// public void askForLeave(){
+		
+	// }
+	public void askForLeave(int staffID, String staffName){
+		LeaveApplication leaveApplication = new LeaveApplication(staffID, staffName, startDate, endDate);
+		staffID = this.staffID;
+		staffName = this.staffName;
+		startDate = 
 		
 		
 	}

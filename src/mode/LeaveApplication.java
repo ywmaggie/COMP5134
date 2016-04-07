@@ -1,17 +1,20 @@
 package mode;
 
 /**
- * 
+ * This class contains the leave application information
  * @author Jianuo
- *
  */
 
 public class LeaveApplication {
 	
-	private int startDate;
-	private int endDate;
-	
-	public LeaveApplication (int startDate, int endDate) {
+	/**
+	 * 
+	 * @param staffID
+	 * @param staffName
+	 * @param startDate
+	 * @param endDate
+	 */
+	public LeaveApplication (int staffID, String staffName, int startDate, int endDate) {
 		
 		
 	}
