@@ -1,7 +1,5 @@
 package mode;
 
-import java.util.HashSet;
-
 //import java.util.HashSet;
 
 
@@ -82,19 +80,12 @@ public class Staff {
 		LeaveApplication leaveApplication = new LeaveApplication(staffID, staffName, startDate, endDate);
 		staffID = this.staffID;
 		staffName = this.staffName;
-		startDate = 
+	 
 		
 		
 	}
 	
-	/**
-	 * receive 
-	 * @param directSupervisor 
-	 * @param replyStatus
-	 */
-	public void receiveApproval(int staffID, boolean replyStatus){
-		
-	}
+
 	
 	/**
 	 * receive 
@@ -110,6 +101,25 @@ public class Staff {
 	 * @param replyStatus   批准/不批准
 	 */
 	public void approve(int staffId, boolean replyStatus){
+		
+	}
+	
+	/**
+	 * receive 
+	 * @param directSupervisor 
+	 * @param replyStatus
+	 */
+	public void receiveApproval(int staffID, boolean replyStatus){
+		
+	}
+	
+	//
+	// You may need more functions to work with your gui applications
+	//
+	
+	// eg.
+	
+	private void notifyAllSupervisors(){
 		
 	}
 

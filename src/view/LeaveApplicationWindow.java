@@ -3,10 +3,10 @@ package view;
 import javax.swing.*;
 import java.awt.*;
 
-public class BackWindow extends JFrame{
+public class LeaveApplicationWindow extends JFrame{
 	
 	
-	public BackWindow(int staffID) {
+	public LeaveApplicationWindow(int staffID) {
         super("Staff Window");
         this.setSize(500, 300);
         this.setLocation(100, 100);
@@ -43,8 +43,7 @@ public class BackWindow extends JFrame{
 
         this.add(aPanel);
         this.setVisible(true);
-        
-        this.staffID = staffID;
+
     }
 
 }
