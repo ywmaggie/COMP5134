@@ -116,10 +116,10 @@ public class Staff {
 	public void receiveApproval(String staffID, boolean replyStatus){
 		if(replyStatus) {
 			//此处希望呼叫到staff的LeaveApplicationWindow,而且这个dialog总感觉应该写在LeaveApplicationWindow里面
-			JOptionPane.showMessageDialog(LeaveApplicationWindow(staffID),"Your application has been approved.");
+//			JOptionPane.showMessageDialog(LeaveApplicationWindow(staffID),"Your application has been approved.");
 		} else {
-			JOptionPane.showMessageDialog(LeaveApplicationWindow(staffID),"Your application has been rejected by "
-		+ supervisor.getStaffID() + " .");
+//			JOptionPane.showMessageDialog(LeaveApplicationWindow(staffID),"Your application has been rejected by "
+//		+ supervisor.getStaffID() + " .");
 		} 
 		
 	}

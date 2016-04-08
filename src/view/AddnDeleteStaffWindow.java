@@ -61,13 +61,13 @@ public class AddnDeleteStaffWindow extends JFrame{
         /**
          * loginButton function
          */
-        loginButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                new LeaveApplicationWindow(staffIDTextField.getText()); //此处如何创建一个可以被关联到某个staff身上的window，并能够被后面的
-                }
-            
-        });
+//        loginButton.addActionListener(new ActionListener() {
+//            @Override
+//            public void actionPerformed(ActionEvent e) {
+//                new LeaveApplicationWindow(staffIDTextField.getText()); //此处如何创建一个可以被关联到某个staff身上的window，并能够被后面的
+//                }
+//
+//        });
         centerPanel.add(loginButton);
         
         aPanel.add(centerPanel, BorderLayout.CENTER);
