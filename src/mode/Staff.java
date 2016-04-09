@@ -29,14 +29,9 @@ public class Staff {
 	 * @param supervisor is the supervisor of the staff.
 	 */
 	
-	// public Staff(int staffId, int staffName, int directSupervisor){
-	// 	waitingDescendents = new HashSet<>();
-	//	waitingReplyOfSupervisors = new HashSet<>();
-	// }
-	public Staff(String staffID, //String staffName,
-			Staff supervisor){
-		
-			
+	public Staff(String staffID, Staff supervisor){
+		this.staffID = staffID;
+        this.supervisor = supervisor;
 	}
 	
 	//
