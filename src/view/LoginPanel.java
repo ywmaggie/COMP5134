@@ -45,8 +45,10 @@ public class LoginPanel extends JPanel implements ActionListener {
 
         } else {
             JOptionPane.showMessageDialog(null, "Login successfully!");
-//            AskForLeaveFrame askForLeaveFrame = new AskForLeaveFrame(allStaff, staffId);
-//            askForLeaveFrame.show();
+            Staff staff = allStaff.get(staffId);
+            AskForLeaveFrame askForLeaveFrame = new AskForLeaveFrame(allStaff, staffId);
+            staff.setFrame(askForLeaveFrame);
+            askForLeaveFrame.show();
         }
     }
 }

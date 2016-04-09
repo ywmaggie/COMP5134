@@ -39,7 +39,8 @@ public class HRPanel extends JPanel implements ActionListener {
             AddStaffFrame addStaffFrame = new AddStaffFrame(allstaff);
             addStaffFrame.show();
         }else{ //someone clicks login button
-
+            LoginFrame loginFrame = new LoginFrame(allstaff);
+            loginFrame.show();
         }
 
     }

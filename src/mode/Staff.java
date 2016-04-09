@@ -1,5 +1,7 @@
 package mode;
 
+import view.AskForLeaveFrame;
+
 import javax.swing.JOptionPane;
 
 //import java.util.HashSet;
@@ -13,14 +15,15 @@ import javax.swing.JOptionPane;
 
 public class Staff {
 	
-	private String staffID;
+	public String staffID;
 	//private String staffName;
 	//private int directSupervisor;
 		
 	//private HashSet<Integer> waitingReplyOfSupervisors;
 	//private HashSet<Integer> waitingDescendents;
 	
-	private Staff supervisor;
+	public Staff supervisor;
+    public AskForLeaveFrame frame;
 	
 	/**
 	 * Constructor for a new staff.
@@ -33,7 +36,10 @@ public class Staff {
 		this.staffID = staffID;
         this.supervisor = supervisor;
 	}
-	
+
+    public void setFrame(AskForLeaveFrame frame){
+        this.frame = frame;
+    }
 	//
 	// getters and setters
 	//
@@ -75,12 +81,8 @@ public class Staff {
 	// public void askForLeave(){
 		
 	// }
-	public void askForLeave(String staffID, //String staffName, 
-			String startDate, String endDate){
-		LeaveApplication leaveApplication = new LeaveApplication(staffID, //staffName, 
-				startDate, endDate);
-		supervisor.receiveLeaveRequest(staffID, leaveApplication);
-		
+	public boolean askForLeave(LeaveApplication leaveApplication){
+		return supervisor.receiveLeaveRequest(staffID, leaveApplication);
 	}
 	
 
@@ -90,8 +92,19 @@ public class Staff {
 	 * @param staffID 申请外出的下级
 	 * @param leaveApplication staffID下级的外出申请
 	 */
-	public void receiveLeaveRequest(String staffID, LeaveApplication leaveApplication){
-		
+	public boolean receiveLeaveRequest(String staffId, LeaveApplication leaveApplication){
+        int dialogButton = JOptionPane.YES_NO_OPTION;
+        String message = staffId + " asks leave from " + leaveApplication.startDate + " to " + leaveApplication.endDate;
+        int dialogResult = JOptionPane.showConfirmDialog (frame, message,"Warning",dialogButton);
+        if(dialogResult == JOptionPane.YES_OPTION) {
+            if(supervisor != null)
+                return askForLeave(leaveApplication);
+            else
+                return true;
+        }
+        else{
+            return false;
+        }
 	}
 	
 	/**

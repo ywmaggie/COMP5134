@@ -6,7 +6,11 @@ package mode;
  */
 
 public class LeaveApplication {
-	
+
+	String staffId;
+    String startDate;
+    String endDate;
+
 	/**
 	 * 
 	 * @param staffID
@@ -14,9 +18,11 @@ public class LeaveApplication {
 	 * @param startDate
 	 * @param endDate
 	 */
-	public LeaveApplication (String staffID, //String staffName, 
+	public LeaveApplication (String staffId,
 			String startDate, String endDate) {
-		
+		this.staffId = staffId;
+        this.startDate = startDate;
+        this.endDate = endDate;
 		
 	}
 
