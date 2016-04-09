@@ -13,11 +13,11 @@ public class LoginFrame extends JFrame {
     private LoginPanel loginPanel;
 
     public LoginFrame(HashMap<String, Staff> allStaff){
-        super("Staff asking for leave");
+        super("Login");
         this.setSize(500, 300);
         this.setLocation(100, 100);
         Container contentPane = getContentPane();
-        loginPanel = new LoginPanel(allStaff);
+        loginPanel = new LoginPanel(allStaff, this);
         contentPane.add(loginPanel);
     }
 }

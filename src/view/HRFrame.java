@@ -13,7 +13,7 @@ public class HRFrame extends JFrame {
     private HRPanel hrPanel;
 
     public HRFrame(HashMap<String, Staff> allStaff){
-        super("Staff asking for leave");
+        super("HR system");
         this.setSize(500, 300);
         this.setLocation(100, 100);
         Container contentPane = getContentPane();

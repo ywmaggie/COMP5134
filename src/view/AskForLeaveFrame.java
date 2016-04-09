@@ -13,7 +13,7 @@ public class AskForLeaveFrame extends JFrame {
     private AskForLeavePanel askForLeavePanel;
 
     public AskForLeaveFrame(HashMap<String, Staff> allStaff, String staffId){
-        super("You can ask for leave");
+        super("HR system");
         this.setSize(500, 300);
         this.setLocation(100, 100);
         Container contentPane = getContentPane();

@@ -82,7 +82,7 @@ public class Staff {
 		
 	// }
 	public boolean askForLeave(LeaveApplication leaveApplication){
-		return supervisor.receiveLeaveRequest(staffID, leaveApplication);
+		return supervisor.receiveLeaveRequest(leaveApplication);
 	}
 	
 
@@ -92,9 +92,9 @@ public class Staff {
 	 * @param staffID 申请外出的下级
 	 * @param leaveApplication staffID下级的外出申请
 	 */
-	public boolean receiveLeaveRequest(String staffId, LeaveApplication leaveApplication){
+	public boolean receiveLeaveRequest(LeaveApplication leaveApplication){
         int dialogButton = JOptionPane.YES_NO_OPTION;
-        String message = staffId + " asks leave from " + leaveApplication.startDate + " to " + leaveApplication.endDate;
+        String message = leaveApplication.staffId + " asks leave from " + leaveApplication.startDate + " to " + leaveApplication.endDate;
         int dialogResult = JOptionPane.showConfirmDialog (frame, message,"Warning",dialogButton);
         if(dialogResult == JOptionPane.YES_OPTION) {
             if(supervisor != null)

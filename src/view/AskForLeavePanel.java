@@ -23,9 +23,9 @@ public class AskForLeavePanel extends JPanel implements ActionListener {
 
     public AskForLeavePanel(HashMap<String, Staff> allStaff, String staffId, AskForLeaveFrame askForLeaveFrame) {
         if (staffId.equals("001")) {
-            add(new JLabel("Wellcome Director!"));
+            add(new JLabel("Welcome Director!"));
         } else {
-            add(new JLabel("Wellcome " + staffId + ", Please input your leaving time."));
+            add(new JLabel("Welcome " + staffId + ", Please input your leaving time."));
 
             add(new JLabel("From", SwingConstants.RIGHT));
 

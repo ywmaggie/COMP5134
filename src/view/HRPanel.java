@@ -18,9 +18,9 @@ public class HRPanel extends JPanel implements ActionListener {
     private HashMap<String, Staff> allstaff;
 
     public HRPanel(HashMap<String, Staff> allStaff) {
-        add(new JLabel("Wellcome to HR system!"));
+        add(new JLabel("Welcome to HR system!"));
 
-        addButton = new JButton("Add a new staff");
+        addButton = new JButton("Add or delete a staff");
         add(addButton);
         addButton.addActionListener(this);
 

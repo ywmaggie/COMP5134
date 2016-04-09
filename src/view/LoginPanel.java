@@ -19,9 +19,11 @@ public class LoginPanel extends JPanel implements ActionListener {
 //    JTextField supervisorIdField;
     JButton loginButton;
     HashMap<String, Staff> allStaff;
+    LoginFrame loginFrame;
 
-    public LoginPanel(HashMap<String, Staff> allStaff) {
+    public LoginPanel(HashMap<String, Staff> allStaff, LoginFrame loginFrame) {
         this.allStaff = allStaff;
+        this.loginFrame = loginFrame;
 
         add(new JLabel("Enter your id to login"));
 
@@ -39,12 +41,12 @@ public class LoginPanel extends JPanel implements ActionListener {
 //        supervisorId = supervisorIdField.getText();
 
         if (staffId.trim().equals("")) {
-            JOptionPane.showMessageDialog(null, "Error: something is missing");
+            JOptionPane.showMessageDialog(loginFrame, "Error: something is missing");
         } else if (!allStaff.containsKey(staffId)) {
-            JOptionPane.showMessageDialog(null, "Error: staff does not exist");
+            JOptionPane.showMessageDialog(loginFrame, "Error: staff does not exist");
 
         } else {
-            JOptionPane.showMessageDialog(null, "Login successfully!");
+            JOptionPane.showMessageDialog(loginFrame, "Login successfully!");
             Staff staff = allStaff.get(staffId);
             AskForLeaveFrame askForLeaveFrame = new AskForLeaveFrame(allStaff, staffId);
             staff.setFrame(askForLeaveFrame);
